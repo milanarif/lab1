@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 /* Mobile */
 body {
-    background-color: #EEEEEE;
+    background-color: #E1E1E1;
     color: black;
 }
 
@@ -24,14 +24,16 @@ nav {
     grid-template-columns: 50px 5fr;
     height: 100%;
     align-content: start;
-    grid-column-gap: 15px;
+    grid-column-gap: 18px;
     margin-left: 10px;
 }
 
 .top-bar h1 {
-    font-family: 'Merriweather', serif;
-    font-size: 36px;
-    padding-top: 5px;
+    text-transform: uppercase;
+    font-family: 'DM Serif Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #000000;
     margin-block-start: 0;
     margin-block-end: 0;
 }
@@ -50,19 +52,19 @@ nav {
     height: 100%;
     display: grid;
     align-items: center;
-    grid-template-columns: repeat(2, 145px);
+    grid-template-columns: repeat(2, 175px);
     grid-column-gap: 30px;
     list-style-type: none;
     padding-inline-start: 0;
     margin-inline: 0;
     margin-block: 0;
-    font-size: 24px;
+    font-size: 28px;
     margin-left: 12px;
 }
 
 .nav-bar ul li {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bolder;
+    font-family: 'DM Serif Display', serif;
+    font-weight: 800;
     cursor: pointer;
 }
 
@@ -83,12 +85,8 @@ main {
 .album {
     max-width: 100%;
     border-radius: 3px;
-    box-shadow: 0 1px 1px rgba(0,0,0,0.11),
-    0 2px 2px rgba(0,0,0,0.11),
-    0 4px 4px rgba(0,0,0,0.11),
-    0 8px 8px rgba(0,0,0,0.11),
-    0 16px 16px rgba(0,0,0,0.11),
-    0 32px 32px rgba(0,0,0,0.11);
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px;
+    transition: all .3s ease-in-out;
     position: relative;
 }
 
@@ -126,20 +124,8 @@ main {
         max-width: 70%;
     }
 
-    .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        opacity: 0;
-        transition: 0.5s ease;
-        background-color: black;
-    }
-
-    .album:hover .overlay {
-        opacity: 0.75;
+    .album:hover {
+        box-shadow: rgba(0, 0, 0, 0.30) 0 19px 43px;
+        transform: translate3d(0px, -5px, 0px);
     }
 }
