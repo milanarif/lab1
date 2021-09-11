@@ -45,13 +45,9 @@ nav {
 .nav-bar {
     height: 100%;
     display: grid;
-}
-
-.nav-bar ul {
-    height: 100%;
-    display: grid;
     align-items: start;
-    grid-template-columns: repeat(3, minmax(115px, 140px));
+    grid-template-columns: 90px 90px 50px;
+    grid-column-gap: 32px;
     width: 40%;
     list-style-type: none;
     padding-inline-start: 0;
@@ -61,10 +57,13 @@ nav {
     margin-left: 10px;
 }
 
-.nav-bar ul li {
+.nav-bar a {
     font-family: 'DM Serif Display', serif;
-    font-weight: 800;
+    font-weight: 700;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
+    width: auto;
 }
 
 main {
@@ -99,7 +98,6 @@ main {
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     header {
         margin-left: 6%;
-        border-left: solid red 2px;
     }
 
     .collection {
@@ -113,7 +111,6 @@ main {
 @media screen and (min-width: 1025px) {
     header {
         margin-left: 15%;
-        border-left: solid blue 2px;
     }
 
     .collection {

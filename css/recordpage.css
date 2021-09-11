@@ -51,13 +51,9 @@ nav {
 .nav-bar {
     height: 100%;
     display: grid;
-}
-
-.nav-bar ul {
-    height: 100%;
-    display: grid;
     align-items: start;
-    grid-template-columns: repeat(3, minmax(115px, 140px));
+    grid-template-columns: 90px 90px 50px;
+    grid-column-gap: 32px;
     width: 40%;
     list-style-type: none;
     padding-inline-start: 0;
@@ -67,10 +63,12 @@ nav {
     margin-left: 10px;
 }
 
-.nav-bar ul li {
+.nav-bar a {
     font-family: 'DM Serif Display', serif;
-    font-weight: 800;
+    font-weight: 700;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
 }
 
 main {
@@ -96,7 +94,7 @@ main {
 
 #upper-album-page p {
     display: block;
-    margin-block-start: 0.35em;
+    margin-block-start: 0.3em;
     margin-block-end: 0;
     font-size: 16px;
     font-weight: 500;
@@ -116,10 +114,35 @@ main {
     border-radius: 3px;
 }
 
+#link-div {
+    margin-top: 20px;
+    display: grid;
+    align-items: center;
+}
+
+#spotify-link {
+    padding: 10px;
+    background-color: black;
+    border-radius: 30px;
+    max-width: 120px;
+}
+
+#spotify-link {
+    padding: 10px;
+    background-color: black;
+    border-radius: 30px;
+    max-width: 120px;
+    height: auto;
+}
+
+#spotify-link-anchor {
+    max-height: 56px;
+}
+
 #song-list {
     font-size: 22px;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 12px;
 }
 
 #song-list ol{
