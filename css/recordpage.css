@@ -96,6 +96,13 @@ main {
     font-size: 22px;
 }
 
+#album-info {
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
 #upper-album-page h2 {
     margin-block-start: 0;
     margin-block-end: 0;
@@ -211,6 +218,15 @@ footer h2 {
 }
 
 @media screen and (min-width: 768px){
+
+    #upper-album-page {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #album-info {
+        justify-items: start;
+    }
+
     footer h2 {
         font-size: 26px;
     }
