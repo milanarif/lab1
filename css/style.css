@@ -1,6 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 /* Mobile */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
     background-color: #E1E1E1;
     color: black;
@@ -8,6 +15,12 @@ body {
 
 header {
     margin-bottom: 10px;
+}
+
+#page-wrap {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2vh 3% 2vh 3%;
 }
 
 nav {
@@ -24,7 +37,6 @@ nav {
     height: 100%;
     align-content: start;
     grid-column-gap: 15px;
-    margin-left: 10px;
 }
 
 .top-bar h1 {
@@ -46,20 +58,20 @@ nav {
     height: 100%;
     display: grid;
     align-items: start;
-    grid-template-columns: 90px 90px 50px;
+    grid-template-columns: 50px 90px 90px;
     grid-column-gap: 32px;
-    width: 40%;
+    width: 100%;
     list-style-type: none;
     padding-inline-start: 0;
     margin-inline: 0;
     margin-block: 0;
     font-size: 26px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .nav-bar a {
     font-family: 'DM Serif Display', serif;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
     text-decoration: none;
     color: black;
@@ -77,13 +89,13 @@ main {
     justify-items: center;
     align-items: center;
     grid-row-gap: 25px;
-    max-width: 95%;
+    max-width: 100%;
 }
 
 .album {
     max-width: 100%;
-    border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.22) 0 3px 6px;
     transition: all .3s ease-in-out;
     position: relative;
 }
@@ -92,32 +104,74 @@ main {
     display: block;
     max-width: 100%;
     height: auto;
-    border-radius: 3px;
+    border-radius: 4px;
+}
+
+footer{
+    font-family: 'Be Vietnam', sans-serif;
+    margin-top: 35px;
+    height: auto;
+    background: linear-gradient(#666, #222);
+    padding: 20px 0 40px 0;
+}
+
+#footer-content-container {
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    color: white;
+    padding-left: 3%;
+    grid-row-gap: 20px;
+}
+
+footer h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#footer-social {
+    display: grid;
+    grid-template-columns: minmax(110px, 150px) minmax(120px, 150px) minmax(90px, 150px);
+    grid-column-gap: 15px;
+}
+
+#footer-social a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    header {
-        margin-left: 6%;
+    #page-wrap {
+        padding: 2vh 4% 2vh 4%;
     }
 
     .collection {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-row-gap: 45px;
         grid-column-gap: 45px;
-        max-width: 88%;
+        max-width: 100%;
     }
+
+    #footer-content-container {
+        padding-left: 4%;
+    }
+
 }
 
 @media screen and (min-width: 1025px) {
-    header {
-        margin-left: 15%;
+    #page-wrap {
+        width: 70vw;
+        max-width: 1200px;
+        padding: 2vh 0 2vh 0;
     }
 
     .collection {
-        grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         grid-row-gap: 60px;
         grid-column-gap: 60px;
-        max-width: 70%;
+        max-width: 100%;
     }
 
     .album:hover {
@@ -125,4 +179,28 @@ main {
         transform: translate3d(0px, -5px, 0px);
     }
 
+    footer{
+        display: grid;
+        justify-items: center;
+    }
+
+    #footer-content-container {
+        width: 70vw;
+        max-width: 1200px;
+        padding-left: 0;
+    }
+
+    footer h2 {
+        font-size: 26px;
+    }
+
+    #footer-social a {
+        font-size: 18px;
+        transition: opacity 0.1s;
+        opacity: 0.85;
+    }
+
+    #footer-social a:hover {
+        opacity: 1;
+    }
 }

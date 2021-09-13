@@ -1,19 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-/* Mobile */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
     background-color: #EAEAEA;
     color: black;
+    cursor: default;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
 }
 
 header {
     margin-bottom: 10px;
-    margin-left: 1%;
 }
 
 #page-wrap {
     max-width: 800px;
-    margin: auto;
+    padding: 2vh 3% 2vh 3%;
 }
 
 nav {
@@ -30,7 +40,6 @@ nav {
     height: 100%;
     align-content: start;
     grid-column-gap: 15px;
-    margin-left: 10px;
 }
 
 .top-bar h1 {
@@ -60,7 +69,7 @@ nav {
     margin-inline: 0;
     margin-block: 0;
     font-size: 26px;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .nav-bar a {
@@ -72,11 +81,11 @@ nav {
 }
 
 main {
-    grid-template-rows: 1fr 1fr;
+    grid-auto-rows: auto;
     display: grid;
     font-family: 'DM Serif Display', serif;
     font-weight: 700;
-
+    grid-row-gap: 30px;
 }
 
 #upper-album-page {
@@ -101,7 +110,7 @@ main {
 }
 
 #album_cover {
-    max-width: 95%;
+    max-width: 100%;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px;
     margin-bottom: 20px;
@@ -142,7 +151,6 @@ main {
 #song-list {
     font-size: 22px;
     font-weight: 600;
-    margin-top: 12px;
 }
 
 #song-list ol{
@@ -151,4 +159,69 @@ main {
 
 #song-list ol li{
     margin-bottom: 10px;
+}
+
+footer{
+    bottom: 0;
+    width: 100%;
+    font-family: 'Be Vietnam', sans-serif;
+    margin-top: 35px;
+    height: auto;
+    background: linear-gradient(#666, #222);
+    padding: 20px 0 40px 0;
+    align-self: end;
+    display: grid;
+    justify-items: center;
+}
+
+#footer-wrapper {
+    width: 100%;
+    max-width: 800px;
+    display: grid;
+    justify-items: start;
+}
+
+#footer-content-container {
+    max-width: 800px;
+    height: auto;
+    display: grid;
+    justify-items: start;
+    color: white;
+    grid-row-gap: 20px;
+}
+
+footer h2 {
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 3%;
+}
+
+#footer-social {
+    display: grid;
+    grid-template-columns: minmax(110px, 150px) minmax(120px, 150px) minmax(90px, 150px);
+    grid-column-gap: 15px;
+    padding-left: 3%;
+}
+
+#footer-social a {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+@media screen and (min-width: 768px){
+    footer h2 {
+        font-size: 26px;
+    }
+
+    #footer-social a {
+        font-size: 18px;
+        transition: opacity 0.1s;
+        opacity: 0.85;
+    }
+
+    #footer-social a:hover {
+        opacity: 1;
+    }
 }
