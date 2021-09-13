@@ -110,7 +110,7 @@ main {
 footer{
     margin-top: 35px;
     height: auto;
-    background: linear-gradient(#666, #222);
+    background: #111;
     padding: 20px 0 40px 0;
 }
 
