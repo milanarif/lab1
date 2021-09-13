@@ -25,6 +25,8 @@ html[data-theme='dark'] {
 body {
     background-color: var(--bg);
     color: var(--font);
+    display: grid;
+    height: 100vh;
 }
 
 header {
@@ -131,6 +133,7 @@ footer{
     height: auto;
     background: var(--bg_footer);
     padding: 20px 0 40px 0;
+    align-self: end;
 }
 
 #footer-content-container {
