@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
-<body>
+<body onload="checkTheme()">
     <div id="page-wrap">
         <header>
             <nav>
@@ -54,9 +54,12 @@
                 <a href="https://www.instagram.com" target="_blank">Instagram</a>
                 <a href="https://www.spotify.com" target="_blank">Spotify</a>
             </div>
+            <div class="toggle-container">
+                <p>Dark</p>
+                <input type="checkbox" id="switch" name="theme" /><label for="switch">Toggle</label>
+            </div>
         </div>
     </footer>
 </body>
-
-
+<script src="main.js"></script>
 </html>
