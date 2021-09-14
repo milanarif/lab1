@@ -25,7 +25,7 @@
   </header>
   <main>
     <div class="container">
-      <form action="">
+      <form action="" id="emailform">
         <label for="name" class="form-label">Full Name</label>
         <input type="text" id="name" name="name" placeholder="Your name.." required>
 
@@ -43,7 +43,7 @@
         <label for="message" class="form-label">Message (optional)</label>
         <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="submitBtn" onclick="formFunction()" />
 
       </form>
     </div>

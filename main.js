@@ -30,7 +30,6 @@ checkbox.addEventListener('change', () => {
     }
 });
 
-
 const checkTheme = () => {
     let theme = localStorage.getItem('data-theme');
     let button = document.getElementById("switch")
@@ -42,14 +41,11 @@ const checkTheme = () => {
     }
 }
 
-
-
-
 // Get the modal
 let modal = document.getElementById("myModal");
 
 // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+let span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 let getKanye = function() {
@@ -62,8 +58,10 @@ let getKanye = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
+if (modal != null) {
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -71,4 +69,14 @@ window.onclick = function(event) {
     if (event.target === modal) {
         modal.style.display = "none";
     }
+}
+
+const formFunction = () => {
+    var x = document.getElementById("emailform");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length-1 ;i++) {
+        text += x.elements[i].value + ";  ";
+    }
+    document.querySelector("form").textContent = text;
 }
