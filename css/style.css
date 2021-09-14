@@ -165,7 +165,7 @@ footer h2 {
     font-weight: 400;
 }
 
-input[type=checkbox] { /* styling for input element */
+#switch { /* styling for input element */
     height: 0;
     width: 0;
     visibility: hidden;
@@ -177,7 +177,7 @@ input[type=checkbox] { /* styling for input element */
     justify-items: center;
 }
 
-label { /* styling for labels */
+#switch-label { /* styling for labels */
     cursor: pointer;
     text-indent: -9999px;
     width: 50px;
@@ -188,7 +188,7 @@ label { /* styling for labels */
     position: relative;
 }
 
-label:after { /* styling for labels - on toggle */
+#switch-label:after { /* styling for labels - on toggle */
     content: '';
     position: absolute;
     top: 3px;
@@ -201,17 +201,17 @@ label:after { /* styling for labels - on toggle */
     transition: 0.3s;
 }
 
-input:checked + label { /* conditional check while toggling */
+#switch:checked + #switch-label { /* conditional check while toggling */
     background: #1ba80e;
 }
 
-input:checked + label:after {
+#switch:checked + #switch-label:after {
     left: calc(100% - 5px);
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
 }
 
-label:active:after {
+#switch-label:active:after {
     width: 45px;
 }
 
