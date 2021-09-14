@@ -13,6 +13,7 @@ html{
     --bg_footer: #111;
     --font: #000;
     --font_footer: #FFF;
+    --form-bg: #111;
 }
 
 html[data-theme='dark'] {
@@ -20,6 +21,7 @@ html[data-theme='dark'] {
     --font: #FFF;
     --bg_footer: #EAEAEA;
     --font_footer: #000;
+    --form-bg: #222;
 }
 
 body {
@@ -49,7 +51,7 @@ nav {
 
 .top-bar {
     display: grid;
-    grid-template-columns: 50px 5fr 50px;
+    grid-template-columns: 50px 5fr;
     height: 100%;
     align-content: start;
     grid-column-gap: 15px;
@@ -99,7 +101,7 @@ nav {
     width: auto;
 }
 
-main {
+main#records {
     display: grid;
     justify-items: center;
 }
@@ -153,8 +155,10 @@ footer h2 {
 
 #footer-social {
     display: grid;
-    grid-template-columns: minmax(110px, 150px) minmax(120px, 150px) minmax(90px, 150px);
+    grid-template-columns: repeat(2, minmax(120px, 150px));
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 15px;
+    grid-row-gap: 25px;
 }
 
 #footer-social a {
@@ -213,6 +217,21 @@ footer h2 {
 
 #switch-label:active:after {
     width: 45px;
+}
+
+@media screen and (min-width: 768px) {
+
+    #footer-social {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 150px));
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+    }
+
+    #footer-content-container {
+        padding-left: 3%;
+        grid-row-gap: 20px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -276,4 +295,45 @@ footer h2 {
     #footer-social a:hover {
         opacity: 1;
     }
+}
+
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], input[type=email], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+.form-label {
+    color: #FFF;
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.1s;
+    opacity: 0.85;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+    opacity: 1;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--form-bg);
+    border-radius: 20px;
 }
