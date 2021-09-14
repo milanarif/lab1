@@ -1,3 +1,8 @@
+const checkbox = document.querySelector('#switch');
+const modalText = document.querySelector('#kanye_quote');
+const modal = document.querySelector('#myModal');
+const form = document.querySelector('#emailform');
+const genreHint = document.querySelector('#genreHint');
 
 let theme = localStorage.getItem('data-theme');
 const changeThemeToDark = () => {
@@ -18,9 +23,6 @@ const changeThemeToLight = () => {
     localStorage.setItem("data-theme", 'light') // save theme to local storage
 }
 
-// Get the element based on ID
-const checkbox = document.getElementById("switch");
-// Apply retrived them to the website
 checkbox.addEventListener('change', () => {
     let theme = localStorage.getItem('data-theme'); // Retrieve saved them from local storage
     if (theme ==='dark'){
@@ -41,15 +43,9 @@ const checkTheme = () => {
     }
 }
 
-// Get the modal
-let modal = document.getElementById("myModal");
-
-// Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
 let getKanye = function() {
-    let modalText = document.querySelector('#kanye_quote')
     fetch('https://api.kanye.rest/')
         .then(response => response.json())
         .then(data => modalText.innerHTML = "\"" + (data.quote) + "\" <br> - Kanye West");
@@ -57,30 +53,31 @@ let getKanye = function() {
     modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
 if (modal != null) {
     span.onclick = function() {
         modal.style.display = "none";
     }
 }
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target === modal) {
         modal.style.display = "none";
     }
 }
 
-const form = document.querySelector('#emailform')
 form.addEventListener('submit', event => {
     event.preventDefault()
     let text = "";
-    text += form.elements['name'].value + " : ";
-    text += form.elements['email'].value + " : ";
-    text += form.elements['genre'].value + " : ";
-    text += form.elements['message'].value;
-    form.textContent = text;
 
+    if (form.elements['genre'].value !== 'empty') {
+        text += form.elements['name'].value + " : ";
+        text += form.elements['email'].value + " : ";
+        text += form.elements['genre'].value + " : ";
+        text += form.elements['message'].value;
+        form.textContent = text;
+    } else {
+        genreHint.innerHTML = 'Please Select a Genre.';
+    }
 
 
 })

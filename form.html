@@ -35,11 +35,13 @@
 
         <label for="genre" class="form-label">Favorite Genre</label>
         <select id="genre" name="genre">
+          <option value="empty"></option>
           <option value="rock">Rock</option>
           <option value="pop">Pop</option>
           <option value="rap">Rap</option>
           <option value="soul">Soul</option>
         </select>
+        <div id="genreHint" class="warning"></div>
 
         <label for="message" class="form-label">Message (optional)</label>
         <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>

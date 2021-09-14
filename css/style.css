@@ -383,3 +383,10 @@ input[type=submit]:hover {
     background-color: var(--form-bg);
     border-radius: 20px;
 }
+
+.warning {
+    margin-top: -10px;
+    padding-bottom: 15px;
+    color: red;
+
+}

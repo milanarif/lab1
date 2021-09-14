@@ -217,8 +217,10 @@ footer h2 {
 
 #footer-social {
     display: grid;
-    grid-template-columns: minmax(110px, 150px) minmax(120px, 150px) minmax(90px, 150px);
+    grid-template-columns: repeat(2, minmax(120px, 150px));
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 15px;
+    grid-row-gap: 25px;
     padding-left: 3%;
 }
 
@@ -293,6 +295,13 @@ label:active:after {
 
     footer h2 {
         font-size: 26px;
+    }
+
+    #footer-social {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(120px, 150px));
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
     }
 
     #footer-social a {
