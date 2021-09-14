@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
 
-    <body onload="checkTheme()">
+    <body onload="checkTheme(); getKanye()">
     <div id="page-wrap">
         <header>
             <nav>
@@ -79,5 +79,11 @@
         </div>
     </footer>
     </body>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="kanye_quote"></h2>
+        </div>
+    </div>
     <script src="main.js"></script>
 </html>
