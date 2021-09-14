@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Records</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="img/vinyl_logo.png" type="image/icon type">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body onload="checkTheme()">
+<div id="page-wrap">
+  <header>
+    <nav>
+      <div class="top-bar">
+        <img src="img/vinyl_logo.png" id="site-logo" alt="">
+        <h1>My Records</h1>
+      </div>
+      <div class="nav-bar">
+        <a href="index.html">ALL</a>
+        <a href="owned.html">OWNED</a>
+        <a href="wants.html">WANTS</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+      <form action="">
+        <label for="name" class="form-label">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name.." required>
+
+        <label for="email" class="form-label">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your email.." required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+
+        <label for="genre" class="form-label">Favorite Genre</label>
+        <select id="genre" name="genre">
+          <option value="rock">Rock</option>
+          <option value="pop">Pop</option>
+          <option value="rap">Rap</option>
+          <option value="soul">Soul</option>
+        </select>
+
+        <label for="message" class="form-label">Message (optional)</label>
+        <textarea id="message" name="message" placeholder="Write something.." style="height:200px"></textarea>
+
+        <input type="submit" value="Submit">
+
+      </form>
+    </div>
+  </main>
+</div>
+<footer>
+  <div id="footer-content-container">
+    <h2>Follow Me</h2>
+    <div id="footer-social">
+      <a href="https://www.facebook.com" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com" target="_blank">Instagram</a>
+      <a href="https://www.spotify.com" target="_blank">Spotify</a>
+      <a href="form.html" target="_blank">Email List</a>
+    </div>
+    <div class="toggle-container">
+      <p>Dark</p>
+      <input type="checkbox" id="switch" name="theme" /><label for="switch" id="switch-label">Toggle</label>
+    </div>
+  </div>
+</footer>
+</body>
+<script src="main.js"></script>
+</html>
