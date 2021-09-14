@@ -355,6 +355,10 @@ input[type=text], input[type=email], select, textarea {
     color: #FFF;
 }
 
+#emailform {
+    color: white;
+}
+
 /* Style the submit button with a specific background color etc */
 input[type=submit] {
     background-color: #04AA6D;

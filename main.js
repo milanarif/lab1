@@ -71,12 +71,16 @@ window.onclick = function(event) {
     }
 }
 
-const formFunction = () => {
-    var x = document.getElementById("emailform");
-    var text = "";
-    var i;
-    for (i = 0; i < x.length-1 ;i++) {
-        text += x.elements[i].value + ";  ";
-    }
-    document.querySelector("form").textContent = text;
-}
+const form = document.querySelector('#emailform')
+form.addEventListener('submit', event => {
+    event.preventDefault()
+    let text = "";
+    text += form.elements['name'].value + " : ";
+    text += form.elements['email'].value + " : ";
+    text += form.elements['genre'].value + " : ";
+    text += form.elements['message'].value;
+    form.textContent = text;
+
+
+
+})
